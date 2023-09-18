@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>实验二-05</title>
+        <script type="text/css">
+        </script>
+
+        <script src="../js/ch02/cuon-utils.js"></script>
+        <script src="../js/ch02/webgl-debug.js"></script>
+        <script src="../js/common/webgl-utils.js"></script>
+        <script src="../js/common/gl-matrix-min.js"></script>
+        <script src="../js/ch02/cuon-matrix.js"></script>
+        <!--    <script src="triangle.js"></script>-->
+        <script src="../js/ch02/task-e.js"></script>
+    </head>
+    <body onload="main()">
+        <br>
+        <div style="text-align: center;">
+            <br>
+            请输入阶数：
+            <input type="number" id="import" min="0" max="7" value="0">
+            <br>
+            请输入要旋转的度数：
+            
+            <input type="number" id="angle" min="0" max="360" value="0">
+            <input type="submit" onclick="start()" value="绘制"/>
+            <br>
+            <canvas id="gl" width="550" height="550"></canvas>
+        </div>
+    </body>
+</html>
