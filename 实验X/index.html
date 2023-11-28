@@ -1,0 +1,59 @@
+<html>
+
+<head>
+    <meta charset="UTF-8" /> <!-- 设置页面编码格式为UTF-8 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- 用于指定网站在不同浏览器中的显示模式，保证网站在现代浏览器中以最高版本显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- 用于调整网站在移动设备上的显示效果，使其自适应不同的屏幕大小 -->
+    <title>小飞机</title> <!-- 网站标题 -->
+    <meta name="description" content="Demo of the game: The Making of 'The Aviator': Animating a Basic 3D Scene with Three.js"> <!-- 网站描述 -->
+    <meta name="keywords" content="three.js, webgl, tutorial, game, 3d, animation, airplane, web development, javascript"> <!-- 网站关键字 -->
+    <link href='https://fonts.googleapis.com/css?family=Playfair+Display:400,700,700italic' rel='stylesheet' type='text/css'> <!-- 导入字体样式表，使用Google Fonts提供的Playfair Display字体 -->
+    <link rel="stylesheet" type="text/css" href="css/demo.css"> <!-- 导入CSS样式表，用于定义网站的样式和布局 -->
+    <link rel="stylesheet" type="text/css" href="css/game.css"> <!-- 导入CSS样式表，用于定义游戏的样式和布局 -->
+    <script type="text/javascript" src="js/TweenMax.min.js"></script> <!-- 导入TweenMax库，用于创建动画效果 -->
+    <script type="text/javascript" src="https://cdn.bootcss.com/three.js/r83/three.min.js"></script> <!-- 导入Three.js库，用于创建3D场景和物体 -->
+    <script type="text/javascript" src="js/game.js"></script> <!-- 导入JavaScript脚本，包含网站和游戏的逻辑代码 -->
+</head>
+
+<body>
+    <div class="game-holder" id="gameHolder"> <!-- 游戏容器 -->
+        <div class="header">
+            <h1><span></span>小飞棍来喽</h1> <!-- 网站标题 -->
+            <!-- <h2>fly it to the end</h2> -->
+            <div class="score" id="score"> <!-- 分数显示区域 -->
+                <div class="score__content" id="level"> <!-- 关卡显示区域 -->
+                    <div class="score__label">等级</div> <!-- 关卡标签 -->
+                    <div class="score__value score__value--level" id="levelValue">1</div> <!-- 当前关卡数 -->
+                    <svg class="level-circle" id="levelCircle" viewbox="0 0 200 200"> <!-- 关卡圆环图 -->
+                        <circle id="levelCircleBgr" r="80" cx="100" cy="100" fill="none" stroke="#d1b790" stroke-width="24px"></circle> <!-- 关卡圆环背景 -->
+                        <circle id="levelCircleStroke" r="80" cx="100" cy="100" fill="none" #f25346 stroke="#68c3c0" stroke-width="14px" stroke-dasharray="502"></circle> <!-- 关卡进度条 -->
+                    </svg>
+                </div>
+                <div class="score__content" id="dist"> <!-- 里程显示区域 -->
+                    <div class="score__label">分数</div> <!-- 里程标签 -->
+                    <div class="score__value score__value--dist" id="distValue">000</div> <!-- 当前里程数 -->
+                </div>
+                <div class="score__content" id="energy"> <!-- 能量显示区域 -->
+                    <div class="score__label">能量</div> <!-- 能量标签 -->
+                    <div class="score__value score__value--energy" id="energyValue"> <!-- 能量条区域 -->
+                        <div class="energy-bar" id="energyBar"></div>
+                    </div>
+                </div>
+                <div class="score__content" id="speed"> <!-- 速度显示区域 -->
+                    <div class="score__label">速度</div> <!-- 速度标签 -->
+                    <div class="score__value score__value--dist" id="speedValue">000</div> <!-- 当前速度值 -->
+                </div>
+            </div>
+        </div>
+        <div class="world" id="world"></div> <!-- 3D世界容器 -->
+        <div class="message message--replay" id="replayMessage">重新开始</div> <!-- 重玩提示信息 -->
+        <div class="message message--instructions" id="instructions">吃蓝色的星星<span>躲避陨石！</span>
+        </div> <!-- 操作提示信息 -->
+    </div>
+   
+    <nav class="meta">
+
+    </nav>
+</body>
+
+</html>
